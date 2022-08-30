@@ -53,8 +53,8 @@ directory. We can instruct autotools to automatically consider these
 directories by creating a file '/usr/local/share/config.site':
 
     cat | sudo tee /usr/local/share/config.site>/dev/null << EOF
-    CPPFLAGS="-I/usr/local/include \$CPPFLAGS"
-    LDFLAGS="-L/usr/local/lib \$LDFLAGS"
+    CPPFLAGS="-I/usr/local/include $CPPFLAGS"
+    LDFLAGS="-L/usr/local/lib $LDFLAGS"
     EOF
 
 Also, because OpenBSD allows to coinstall multiple versions of the
@@ -94,8 +94,8 @@ can instruct autotools to automatically consider these directories by
 creating a file '/usr/pkg/share/config.site':
 
     cat | sudo tee /usr/pkg/share/config.site>/dev/null << EOF
-    CPPFLAGS="-I/usr/pkg/include \$CPPFLAGS"
-    LDFLAGS="-L/usr/pkg/lib -Wl,-R/usr/pkg/lib \$LDFLAGS"
+    CPPFLAGS="-I/usr/pkg/include $CPPFLAGS"
+    LDFLAGS="-L/usr/pkg/lib -Wl,-R/usr/pkg/lib $LDFLAGS"
     EOF
 
 Now that your build system is set up, you can follow the general

@@ -138,9 +138,9 @@ info.
 These scripts automate building Pd with the fallback makefiles in the
 src directory.
 
-To build a 32 bit Pd, copy this "mac" directory somewhere like \~/mac.
+To build a 32 bit Pd, copy this "mac" directory somewhere like ~/mac.
 Also copy a source tarball there, such as pd-0.47-1.src.tar.gz. Then cd
-to \~/mac and type:
+to ~/mac and type:
 
     ./build-macosx 0.47-1
 

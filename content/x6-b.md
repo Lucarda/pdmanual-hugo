@@ -31,7 +31,7 @@ compilation works in 32 bits only.
 The scripts build-msw-32.sh and build-msw-64.sh are the ones used by
 Miller to make Pd releases. These files work on Linux only and will not
 work out of the box unless your file tree resembles Miller's in some
-ways (pd source is in \~/pd for instance) but you can presumably make
+ways (pd source is in ~/pd for instance) but you can presumably make
 your own version if you need to.
 
 But to first get things working, it's best to use msw-app.sh and
@@ -165,10 +165,10 @@ redistribute their source files.
 
 Install the ASIO SDK by doing the following:
 
--   1\. Download the ASIO SDK:
+-   1. Download the ASIO SDK:
     [https://www.steinberg.net/en/company/developer.html](https://www.steinberg.net/en/company/developer.html){target="_blank"}
--   2\. Uncompress asiosdk2.3.zip (or higher) into pure-data/asio/
--   3\. remove the version number so that you get pure-data/asio/ASIOSDK
+-   2. Uncompress asiosdk2.3.zip (or higher) into pure-data/asio/
+-   3. remove the version number so that you get pure-data/asio/ASIOSDK
 
 Now build Pd and it should include ASIO as one of the audio backends.
 

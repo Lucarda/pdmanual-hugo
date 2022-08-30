@@ -63,22 +63,22 @@ C or C++). They have to be compiled for your operating system, which
 means the binaries have different extensions according to each platform.
 For instance:
 
-  Operating System   CPU-architecture                   filename
-  ------------------ ---------------------------------- --------------------
-  Linux              *unspecified* (any architecture)   `my_lib.pd_linux`
-  Linux              i386 (Intel/AMD 32bit)             `my_lib.l_i386`
-  Linux              amd64 (Intel/AMD 64bit)            `my_lib.l_amd64`
-  Linux              arm (e.g. RaspberryPi)             `my_lib.l_arm`
-  Linux              arm64                              `my_lib.l_arm64`
-  macOS              *unspecified* (any architecture)   `my_lib.pd_darwin`
-  macOS              fat (multiple archs)               `my_lib.d_fat`
-  macOS              PowerPC                            `my_lib.d_ppc`
-  macOS              i386 (Intel 32bit)                 `my_lib.d_i386`
-  macOS              amd64 (Intel 64bit)                `my_lib.d_amd64`
-  macOS              arm64 (Apple Silicon)              `my_lib.d_arm64`
-  Windows            *unspecified* (any architecture)   `my_lib.dll`
-  Windows            i386 (Intel/AMD 32bit)             `my_lib.m_i386`
-  Windows            amd64 (Intel/AMD 64bit)            `my_lib.m_amd64`
+|Operating System   |CPU-architecture                   |filename|
+|:-----------------:|:---------------------------------:|:------------------:|
+|Linux              |*unspecified* (any architecture)   |`my_lib.pd_linux`|
+|Linux              |i386 (Intel/AMD 32bit)             |`my_lib.l_i386`|
+|Linux              |amd64 (Intel/AMD 64bit)            |`my_lib.l_amd64`|
+|Linux              |arm (e.g. RaspberryPi)             |`my_lib.l_arm`|
+|Linux              |arm64                              |`my_lib.l_arm64`|
+|macOS              |*unspecified* (any architecture)   |`my_lib.pd_darwin`|
+|macOS              |fat (multiple archs)               |`my_lib.d_fat`|
+|macOS              |PowerPC                            |`my_lib.d_ppc`|
+|macOS              |i386 (Intel 32bit)                 |`my_lib.d_i386`|
+|macOS              |amd64 (Intel 64bit)                |`my_lib.d_amd64`|
+|macOS              |arm64 (Apple Silicon)              |`my_lib.d_arm64`|
+|Windows            |*unspecified* (any architecture)   |`my_lib.dll`|
+|Windows            |i386 (Intel/AMD 32bit)             |`my_lib.m_i386`|
+|Windows            |amd64 (Intel/AMD 64bit)            |`my_lib.m_amd64`|
 
 ### Abstractions:
 

@@ -1,5 +1,5 @@
 
-## Pd Manual chapter 4: externals
+## Pd Manual: externals
 
 [back to table of contents](index.htm#s4)
 
@@ -21,9 +21,9 @@ the pd-lib-builder project (a helper makefile for Pure Data external
 libraries by Katja Vetter) at
 <http://github.com/pure-data/pd-lib-builder>
 
-[4.1 External Objects & Libraries]{#s1}
+### External Objects & Libraries
 
-### [4.1.1 What are: Vanilla Objects, Internals & Externals?]{#s1.1}
+### What are: Vanilla Objects, Internals & Externals?
 
 Internal objects come as part of the Pd binary, whereas external objects
 are separate from it. The main Pd distribution (a.k.a. "Pd Vanilla")
@@ -50,13 +50,13 @@ lists the objects in the extra folder.
 
 ![](fig4.2.png)
 
-### [4.1.2. What are the Types of External Objects?]{#s1.2}
+### What are the Types of External Objects?
 
 An object in Pd can be either a patch - meaning a Pd file (a.k.a
 abstraction) - or a compiled binary (note that a binary can contain only
 one or several external objects, as discussed further on).
 
-### [4.1.2.1. Compiled objects:]{#s1.2.1}
+### Compiled objects:
 
 These are Pd objects compiled to binaries from programming code (like in
 C or C++). They have to be compiled for your operating system, which
@@ -80,7 +80,7 @@ For instance:
   Windows            i386 (Intel/AMD 32bit)             `my_lib.m_i386`
   Windows            amd64 (Intel/AMD 64bit)            `my_lib.m_amd64`
 
-### [4.1.2.2. Abstractions:]{#s1.2.2}
+### Abstractions:
 
 You can have a Pd patch behave like an object by loading it into other
 patches - these are usually called "abstractions". Note that some of the
@@ -88,7 +88,7 @@ externals in "extra" are abstractions (for instance, rev1~ or
 hilbert~). Like any other Pd patch, an abstraction may contain any kind
 of objects (internals, compiled externals and even other abstractions).
 
-### [4.1.3. What are External Libraries?]{#s1.3}
+### What are External Libraries?
 
 In practical terms, an external library is a collection of external
 objects of any kind (abstractions or compiled objects). But when it
@@ -106,7 +106,7 @@ It's important to note that there are differences on how externals are
 loaded depending if they're a single binary pack or a set of separate
 binaries (as explained in the next subsections).
 
-### [4.1.4. What are the types of External Libraries?]{#s1.4}
+### What are the types of External Libraries?
 
 Libraries can come in all sorts of ways; as only a collection of
 abstractions (like "list-abs"), only compiled objects, or both. It can
@@ -119,7 +119,7 @@ version 0.3), which provides most of its objects as a **set of separate
 binaries**, but also includes a small collection of 12 objects as a
 **single binary pack** plus a few abstractions.
 
-### [Wrapping up Part 1)]{#xx1}
+### Wrapping up Part 1)
 
 -   **Internal objects:** Objects that are part of Pd Vanilla's binary.
 -   **External objects:** Objects that are [NOT]{.underline} part of Pd
@@ -138,13 +138,13 @@ binaries**, but also includes a small collection of 12 objects as a
 
 ------------------------------------------------------------------------
 
-### [4.2. Installing External Objects and Libraries]{#s2}
+### Installing External Objects and Libraries
 
 Installing externals in Pd is quite simple, all you need to do is
 download your externals from somewhere, such as from Pd Vanilla
 directly, and include them in a proper folder.
 
-### [4.2.1. Where to include the externals?]{#s2.1}
+### Where to include the externals?
 
 Currently, when launching for the first time with a fresh install, Pd
 asks if you want to create a documents directory for patches that
@@ -222,7 +222,7 @@ C) GNU/Linux:
     but still usable).
 -   [Global]{.underline}: [ **/usr/local/lib/pd-externals**]{.mark}.
 
-### [4.2.2. How to Download Externals from Pd Vanilla?]{#s2.2}
+### How to Download Externals from Pd Vanilla?
 
 Since version 0.47-0, Pd Vanilla has its own external manager! This is a
 built in .tcl plug-in named "deken" (check
@@ -241,7 +241,7 @@ When you click on the version you want, by default Pd downloads it to
 
 ------------------------------------------------------------------------
 
-### [4.3. Loading Externals]{#s3}
+### Loading Externals
 
 The current best practice is to use the declare object to search for,
 load and manage externals, but there are alternatives.
@@ -257,7 +257,7 @@ this can be done with declare or manually via Preferences => Path, but
 yet another option here is to use slash declarations as we'll see
 later.
 
-### [4.3.1. Using the [declare] object:]{#s3.1}
+### Using the [declare] object:
 
 The declare object can be used to add search paths or load libraries.
 When adding a path, it behaves quite similarly to adding search paths to
@@ -270,7 +270,7 @@ it sticks with it. This means that if you use [declare] to load a
 library, it will also be loaded if you create a new patch without any
 [declare] object.
 
-### [4.3.1.1. [declare -path]:]{#s3.1.1}
+### [declare -path]:
 
 Let's take for an example the [ELSE](http://github.com/porres/pd-else)
 library. This library contains separate binaries and abstractions, so Pd
@@ -297,7 +297,7 @@ need to add the external folder to the path, manually or use
 if it finds a folder with the same name as the external, it'll know to
 search inside that folder for the external!
 
-### [4.3.1.2. [declare -lib]:]{#s3.1.2}
+### [declare -lib]:
 
 The '-lib' flag is needed for the classic Pd library format, which is
 a single binary pack with many externals. One such example is the
@@ -318,12 +318,12 @@ patch.
 
 For more details on how [declare] works, please check its help file!
 
-### [4.3.2. Load via Path and Startup:]{#s3.2}
+### Load via Path and Startup:
 
 We'll now see the differeces between using [declare] or using
 "Path" and "Startup".
 
-### [4.3.2.1. User added Path:]{#s3.2.1}
+### User added Path:
 
 One big difference in adding a search path in "Preferences => Path"
 "is that this permanently adds the path and work every time Pd starts
@@ -348,7 +348,7 @@ Note also that having a user added search path will not make it have
 search priority like it happens when you use [declare]. In this case,
 the path relative to the patch will always have top priority!
 
-### [4.3.2.2. Startup:]{#s3.2.2}
+### Startup:
 
 "Preferences => Startup" loads a window that says *"Pd libraries to
 load on startup"*. This is where you can manually and permanently load
@@ -388,7 +388,7 @@ This may cause issues discussed on the next section.
 
 ![](fig4.6.png)
 
-### [4.3.3. Slash declarations:]{#s3.3}
+### Slash declarations:
 
 What is this and how does it work? Let's say you've downloaded the ELSE
 library into ~/Documents/Pd/externals. Instead of using [declare -path
@@ -451,7 +451,7 @@ cyclone's instead.
 These issues might be clear if you better understand how Pd works when
 loading externals. See next subsection.
 
-### [4.4. How external binaries are loaded]{#s4}
+### How external binaries are loaded
 
 Once you make sure Pd can load an external binary, this is what happens
 when you create it. Whenever you type the name of an object (into an
@@ -481,7 +481,7 @@ to take.
 Let us just make the distinction that external abstractions work quite
 differently! As they get updated any time they're updated and reloaded!
 
-### [4.4.1. Overriding objects (externals and native):]{#s3.3}
+### Overriding objects (externals and native):
 
 We've seen that Pd loads and sticks to an external. But this can get
 overridden. We've actually seen that already. For instance, you create
@@ -502,7 +502,7 @@ and renames it by appending "_aliased", so you can still load the old
 don't want to mess overriding internals, but it makes sense if you
 provide new versions with more features but fully backwards compatible.
 
-### [4.5. Search order for loading objects]{#s4}
+### Search order for loading objects
 
 This information has been provided in pieces throughout this section of
 the Manual. But now well wrap it up after all the information has been

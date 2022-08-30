@@ -1,5 +1,5 @@
 
-## Pd Manual chapter 3: Getting Pd to run
+## Pd Manual: Getting Pd to run
 
 [back to table of contents](index.htm#s3)
 
@@ -21,7 +21,7 @@ on <https://lists.puredata.info/listinfo/pd-list>. , which often has
 late-breaking news about configuration problems and solutions. The rest
 of this section describes how to get audio and MIDI to work.
 
-### [3.1. Audio and MIDI]{#s1.0}
+### Audio and MIDI
 
 To test audio and MIDI, start Pd and select "test Audio and MIDI" from
 the "Media" menu. You should see a window like this:
@@ -130,7 +130,7 @@ inlet to specify which of the open MIDI port numbers you want.
 System exclusive MIDI message input and output are theoretically
 supported but does not work uniformly across all operating systems..
 
-### [3.2. Installing Pd in Microsoft Windows]{#s1.1}
+### Installing Pd in Microsoft Windows
 
 Pd should work under any version of Windows since XP. You can download
 as a self-extracting archive (a ".exe" file). Run this and select a
@@ -165,7 +165,7 @@ milliseconds. Pd will round this down to a power of two buffers, each of
 TIP: You can use your built-in sound-card with the Universal ASIO Driver
 For WDM <http://www.asio4all.org/>
 
-### [3.3. Installing Pd in Linux]{#s1.2}
+### Installing Pd in Linux
 
 What to do depends on which flavor of Linux you are running (e.g.,
 Debian or Red Hat). The instructions here should work for Pd 0.33 and up
@@ -321,7 +321,7 @@ series, which goes up to 6 in and out (analog) with 2 more as SP/DIF.
 Things work OK for input or output separately but "full duplex" (in
 and out simultaneously) has sync problems.
 
-### [3.4. Installing Pd in macOS]{#s1.3}
+### Installing Pd in macOS
 
 Pd version 0.35 and up support macOS. Recent versions of Pd require 10.6
 or up.
@@ -379,7 +379,7 @@ To get MIDI working, you have to do the macOS magic to get a USB MIDI
 interface installed. I've seen this done with Midisport devices and I
 think you just download the macOS driver and follow directions.
 
-### [3.5. Preferences and startup options]{#s4}
+### Preferences and startup options
 
 Pd's behavior may be customized to instruct it where to find files,
 which audio devices to open, what font size to use, and so on. Most of
@@ -588,7 +588,7 @@ but no less than 0.1 and no more than 5. On most OSes, ingoing and
 outgoing MIDI is quantized to this value, so if you care about MIDI
 timing, reduce this to 1 or less.
 
-### [3.6. How Pd searches for files]{#s5}
+### How Pd searches for files
 
 Pd has a search path feature; you specify the path on the command line
 using the "-path" option. Paths may contain any number of files. If

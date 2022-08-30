@@ -1,5 +1,5 @@
 
-## Pd Manual chapter 2: theory of operation
+## Pd Manual: theory of operation
 
 [back to table of contents](index.htm#s2)
 
@@ -10,7 +10,7 @@ run Pd are described in the [next chapter](x3.htm). Links to more
 extensive guides (and to more theoretical information about computer
 music) can be found in the [previous chapter](x1.htm).
 
-### [2.1 overview]{#s1}
+### overview
 
 Pd is a real-time graphical programming environment for audio and
 graphical processing. It resembles the Max/MSP system but is much
@@ -20,7 +20,7 @@ simultaneous computer animation and computer audio. Second, an
 experimental facility is provided for defining and accessing data
 structures.
 
-### [2.1.1. the main window, canvases, and printout]{#s1.1}
+### the main window, canvases, and printout
 
 When Pd is running, you'll see a main "Pd" window, and possibly one
 or more "canvases" or "patches". The main Pd window looks like this:
@@ -49,7 +49,7 @@ the inputs on top and the outputs on bottom.
 Pd's printout appears on the main "Pd" window, unless you redirect it
 elsewhere.
 
-### [2.1.2. object boxes]{#s1.2}
+### object boxes
 
 Pd patches can have four types of boxes: *object, message, GUI,* and
 *comment* .
@@ -117,7 +117,7 @@ they are automatically converted to signals. Signal connections may not
 be made to control inlets; some sort of explicit conversion must be
 specified.
 
-### [2.1.3. message and GUI boxes]{#s1.3}
+### message and GUI boxes
 
 The border of a box tells you how its text is interpreted and how the
 box functions. Object boxes (as in the previous example) use the text to
@@ -149,7 +149,7 @@ see [getting help](x2.htm#s2.7) to find out how to look this up).
 In addition to numbers, Pd defines GUI boxes to display and edit symbols
 or arbitrary lists of atoms.
 
-### [2.1.4. patches and files]{#s1.4}
+### patches and files
 
 When you save a patch to a file, Pd doesn't save the entire state of
 all the objects in the patch, but only what you see: the objects'
@@ -163,9 +163,9 @@ by colons (semicolons if you're using windows.) Most objects which can
 read files search for them along the search path, but when Pd writes
 files they go to the directory where the patch was found.
 
-### [2.2. editing Pd patches]{#s2}
+### editing Pd patches
 
-### [2.2.1. edit and run mode]{#s2.1}
+### edit and run mode
 
 A patch can be in edit or run mode; this really only affects how mouse
 clicks affect the patch. In edit mode, clicking and dragging selects and
@@ -175,7 +175,7 @@ number and message boxes can be used as controls. Normally, when you are
 in a performance you will stay in run mode; to change the patch you go
 to edit mode.
 
-### [2.2.2. creating boxes]{#s2.2}
+### creating boxes
 
 You can create boxes (objects, messages, GUIs, and comments) using the
 "put" menu. Note the handy accelerators. Object and message boxes are
@@ -188,7 +188,7 @@ it (in the Edit menu) than to use the "Put" menu. If you select and
 duplicate several items, any connections between them will be duplicated
 as well.
 
-### [2.2.3. the selection]{#s2.3}
+### the selection
 
 Boxes in a Pd window may be selected by clicking on them. To select more
 than one object you may use shift-click or click on a blank portion of
@@ -203,7 +203,7 @@ mouse to change the selection.
 You may also select a single connection (patch cord) by clicking on it.
 You can't have connections and boxes selected simultaneously.
 
-### [2.2.4. deleting, cutting, and pasting]{#s2.4}
+### deleting, cutting, and pasting
 
 If you select a box, a connection, or several boxes, and if you haven't
 made any text active, you can "delete" the selection by hitting the
@@ -221,7 +221,7 @@ boxes isn't implemented yet, although in Linux at least you can
 "X-paste" into and out of "text" dialogs (created with the "edit
 text" menu item.)
 
-### [2.2.5. changing the text]{#s2.5}
+### changing the text
 
 To change a text item, you can select it and then edit the text. If you
 only click once, the entire text is selected and your typing will
@@ -244,7 +244,7 @@ will be selecting text instead of moving the box.
 object.* Changing the text in an "object" box deletes the old object
 and creates a new one; the internal state of the old one is lost.
 
-### [2.2.6. connecting and disconnecting boxes]{#s2.6}
+### connecting and disconnecting boxes
 
 To make a connection between two boxes, click on any outlet of the first
 one, drag toward an inlet of the second one, and release. You can
@@ -254,7 +254,7 @@ connection will be made to the nearest inlet.
 Connections are broken by selecting them and using "cut" or the
 backspace or delete key.
 
-### [2.2.7. popup menu for properties, open, and help]{#s2.7}
+### popup menu for properties, open, and help
 
 All the "clicking" mentioned above is done with the left mouse button.
 The right button, instead, gives a popup menu offering "properties,"
@@ -273,18 +273,18 @@ the only way to do it.
 The "properties" dialog allows you to change certain settings of GUI
 objects, or of the patch itself (by clicking outside any box.)
 
-### [2.2.8. miscellaneous]{#s2.7}
+### miscellaneous
 
 Control-q "quits" Pd, but asks you to confirm the quit. To quit
 without having to confirm, use command-shift-Q.
 
-### [2.3. messages]{#s3}
+### messages
 
 In Pd, objects intercommunicate by sending messages and/or audio
 signals. Pd messages are sporadic, like MIDI messages or music N "Note
 cards."
 
-### [2.3.1. anatomy of a message]{#s3.1}
+### anatomy of a message
 
 Messages contain a selector followed by any number of arguments. The
 selector is a symbol, which appears in the patch as a non-numeric string
@@ -317,7 +317,7 @@ be used as a selector. A single number is always given the "float"
 selector automatically, and a message with a number followed by other
 arguments is given the selector "list".
 
-### [2.3.2. depth first message passing]{#s3.2}
+### depth first message passing
 
 In Pd whenever a message is initiated, the receiver may then send out
 further messages in turn, and the receivers of those messages can send
@@ -348,7 +348,7 @@ message for the future (even if the time delay is 0) and is then
 "finished;" Pd's internal scheduler will wake the delay back up
 later.
 
-### [2.3.3. hot and cold inlets and right to left outlet order]{#s3.3}
+### hot and cold inlets and right to left outlet order
 
 With few exceptions (notably "timer"), objects treat their leftmost
 inlet as "hot" in the sense that messages to left inlets can result in
@@ -403,7 +403,7 @@ order in which two messages are sent to a single "cold" inlet. In this
 situation, since the messages are merged, the last value to be received
 is the value that is used in the computation.
 
-### [2.3.4. message boxes]{#s3.4}
+### message boxes
 
 Message boxes are text boxes in which you type a message. When the
 message box is activated, either by clicking on it or sending something
@@ -452,14 +452,14 @@ message box to activate it.) Dollar sign variables are either numbers or
 symbols depending on the incoming message; if symbols, you may even use
 them to specify variable message selectors or destinations.
 
-### [2.4. audio signals]{#s4}
+### audio signals
 
 Using Pd you can build audio patches which can synthesize musical
 sounds, analyze incoming sounds, process incoming sounds to produce
 transformed audio outputs, or integrate audio processing with other
 media. This section describes how Pd treats audio signals.
 
-### [2.4.1. sample rate and format]{#s4.1}
+### sample rate and format
 
 Pd's audio signals are internally kept as 32-bit floating point
 numbers, so you have all the dynamic range you could want. However,
@@ -473,7 +473,7 @@ Pd can read or write samples to files either in 16-bit or 24-bit fixed
 point or in 32-bit floating point, in WAV, AIFF, or AU format, via the
 soundfiler, readsf, and writesf objects.
 
-### [2.4.2. tilde objects and audio connections]{#s4.2}
+### tilde objects and audio connections
 
 Audio computations in Pd are carried out by "tilde objects" such as
 "osc~" whose names conventionally end in a tilde character to warn
@@ -500,7 +500,7 @@ algorithms with feedback using nonlocal signal connections.
 Your subpatches can have audio inlets and outlets via the inlet~ and
 outlet~ objects.
 
-### [2.4.3. converting audio to and from messages]{#s4.3}
+### converting audio to and from messages
 
 If you want to use a control value as a signal, you can use the sig~
 object to convert it. The +~, -~, *~, /~, osc~, and phasor~
@@ -513,7 +513,7 @@ then get access it via tabread or tabread4 (note the missing tildes!).
 There are also analysis objects, the simplest of which is "env~", the
 envelope follower.
 
-### [2.4.4. switching and blocking]{#s4.4}
+### switching and blocking
 
 You can use the switch~ or block~ objects to turn portions of your
 audio computation on and off and to control the block size of
@@ -547,7 +547,7 @@ When a subpatch is switched off its audio outputs generate zeros; this
 costs a fairly small overhead; a cheaper way to get outputs is to use
 throw~ inside the switched module and catch~ outside it.
 
-### [2.4.5. nonlocal signal connections]{#s4.5}
+### nonlocal signal connections
 
 You may wish to pass signals non-locally, either to get from one window
 to another, or to feed a signal back to your algorithm's input. This
@@ -578,13 +578,13 @@ delwrite~. The only way to ensure this is to create the delread~ after
 you created the delwrite~; if things get out of whack, just delete and
 re-create the delread~.
 
-### [2.5. scheduling]{#s5}
+### scheduling
 
 Pd uses 64-bit floating point numbers to represent time, providing
 sample accuracy and essentially never overflowing. Time appears to the
 user in milliseconds.
 
-### [2.5.1. audio and messages]{#s5.1}
+### audio and messages
 
 Audio and message processing are interleaved in Pd. Audio processing is
 scheduled every 64 samples at Pd's sample rate; at 44100 Hz. this gives
@@ -603,7 +603,7 @@ In the middle of a message cascade you may schedule another one at a
 delay of zero. This delayed cascade happens after the present cascade
 has finished, but at the same logical time.
 
-### [2.5.2. computation load]{#s5.2}
+### computation load
 
 The Pd scheduler maintains a (user-specified) lead on its computations;
 that is, it tries to keep ahead of real time by a small amount in order
@@ -626,7 +626,7 @@ to make sound. If a sub-window is closed, Pd suspends sending the GUI
 update messages for it; but not so for miniaturized windows as of
 version 0.32. You should really close them when you aren't using them.
 
-### [2.5.3. determinism]{#s5.3}
+### determinism
 
 All message cascades that are scheduled (via "delay" and its
 relatives) to happen before a given audio tick will happen as scheduled
@@ -648,12 +648,12 @@ nondeterministic results.)
 If two message cascades are scheduled for the same logical time, they
 are carried out in the order they were scheduled.
 
-### [2.6. semantics]{#s6}
+### semantics
 
 This section describes how objects in Pd are created, how they store
 data and how object and other boxes pass messages among themselves.
 
-### [2.6.1. creation of objects]{#s6.1}
+### creation of objects
 
 The text in a box has a different function depending on whether it is a
 message, atom (number/symbol), or object box. In message boxes the text
@@ -676,7 +676,7 @@ parameterize the object being created. Thus in "makenote 64 250" the
 selector "makenote" determines the class of object to create and the
 creation arguments 64 and 250 become the initial velocity and duration.
 
-### [2.6.2. persistence of data]{#s6.2}
+### persistence of data
 
 Among the design principles of Pd is that patches should be printable,
 in the sense that the appearance of a patch should fully determine its
@@ -699,7 +699,7 @@ It is probably bad style to specify creation arguments ala "makenote 64
 250" if you are going to override them later; this is confusing to
 anyone who tries to understand the patch.
 
-### [2.6.3. message passing]{#s6.3}
+### message passing
 
 Messages in Pd consist of a selector (a symbol) and zero or more
 arguments (which may be symbols or numbers). To pass a message to an
@@ -727,7 +727,7 @@ Each other class (like "float") in Pd has its own protocol for
 responding to messages it is sent, and may take "float" and "bang"
 messages, or others in addition or instead of them.
 
-### [2.6.4. inlets and lists]{#s6.4}
+### inlets and lists
 
 The leftmost connection point at the top of most objects represents the
 object itself. Any other dark rectangle is a separate object called an
@@ -741,7 +741,7 @@ respond to the "list" message by distributing the arguments of the
 message to their inlets, except for the first argument which is passed
 as a "float" or "symbol" message to the object proper.
 
-### [2.6.5. dollar signs]{#s6.5}
+### dollar signs
 
 In message or object boxes, message arguments starting with a dollar
 sign and a number (like "$1" or "$3-bazoo") are variables which
@@ -779,7 +779,7 @@ call a1 twice, as "a1 cat" and "a1 dog". Inside the four "a2"
 copioes, $1 will evaluate to "dog-food", "cat-food", "dog-ears",
 and "cat-ears".
 
-### [2.7. subpatches]{#s7}
+### subpatches
 
 Pd offers two mechanisms for making subpatches, called "one-off
 subpatches" and "abstractions." In either case the subpatch appears
@@ -807,7 +807,7 @@ but a signal outlet only takes signals. Inlets and outlets appear on the
 invoking box in the same left-to-right order as they appear in the
 subpatch.
 
-### [2.7.1. abstractions]{#s7.1}
+### abstractions
 
 To make an abstraction, save a patch with a name such as
 "abstraction1.pd" and then invoke it as "abstraction1" in an object
@@ -849,7 +849,7 @@ time in an object box than in a message box. In an object box, the
 "$" argument is expanded at creation time, and in a message box, at
 message time.
 
-### [2.7.2. Graph-on-parent subpatches]{#s7.2}
+### Graph-on-parent subpatches
 
 If you open the "properties" dialog for a subpatch or an abstraction,
 you can check the "graph on parent" box to have the controls of the
@@ -878,7 +878,7 @@ instead; so the number box in the sub-patch in the example above is the
 same one as you see in the box. Only controls are made visible in this
 way
 
-### [2.8. numeric arrays]{#s8}
+### numeric arrays
 
 Linear arrays of numbers recur throughout the computer musician's bag
 of tricks, beginning with the wavetable oscillator. The wavetable
@@ -981,7 +981,7 @@ screen size of the graph, width and height, in screen pixels.
 Many other operations are defined for arrays; see the related patches in
 the tutorial (starting at 2.control/15.array.pd) for more possibilities.
 
-### [2.9. Data structures]{#s9}
+### Data structures
 
 (Note: this section is adapted from an article submitted to ICMC 2002.)
 
@@ -1070,7 +1070,7 @@ the color "voiceno". In this way the color of the second trace is
 attached to the "voiceno" slot in the data structure, so that color
 will vary according to its "voiceno" slot.
 
-### [2.9.1. Traversal]{#s9.1}
+### Traversal
 
 Pd objects are provided to traverse lists and arrays, and to address
 elements of data structures for getting and setting. Here is a patch
@@ -1149,7 +1149,7 @@ heterogeneous lists of objects (having different templates). In this
 way, an arbitrarily rich personal "score language" can be developed
 and sequenced.
 
-### [2.9.2. Accessing and changing data]{#s9.2}
+### Accessing and changing data
 
 In general, accessing or changing data is done via "pointers" to
 "scalars". Numbers and symbols within scalars are accessed using the
@@ -1191,7 +1191,7 @@ deletion mechanisms except that it's not clear how to protect against
 stale pointers efficiently, except by voiding the entire collection of
 pointers into a list.)
 
-### [2.9.3. Editing]{#s9.3}
+### Editing
 
 The graphical score shown above can be edited by dragging breakpoints,
 or by adding and deleting them, using mouse clicks. Also, entire objects
@@ -1236,7 +1236,7 @@ belonging to two or more structures of the same name. The worst that can
 happen is that data may lose their drawing instructions, in which case
 Pd supplies a simple default shape.
 
-### [2.9.4. Limitations]{#s9.4}
+### Limitations
 
 When examples get more complicated and/or dense than the one shown here,
 it becomes difficult to see and select specific features of a data
@@ -1263,6 +1263,7 @@ presentation and editing functions.
 
 
 [next chapter](x3.htm)
+
 [back to table of contents](index.htm#s2)
 
 

@@ -2,13 +2,13 @@
 [back to ch6](x6.htm#BSD){.green} [back to table of
 contents](index.htm#s6)
 
-### 6.3.1. BSD {#sBSD}
+### BSD
 
 Building Pd for the various BSD variants is similar to the Linux way.
 The major difference is the used package manager (and the names of the
 packages), you'll want to install.
 
-### FreeBSD {#s6.6.1}
+### FreeBSD
 
 (Tested on FreeBSD-13)
 
@@ -31,7 +31,7 @@ The ordinary BSD `make` will not suffice!
 
     sudo gmake install
 
-### OpenBSD {#sOpenBSD}
+### OpenBSD
 
 (Tested on OpenBSD-7)
 
@@ -74,7 +74,7 @@ autotools build steps to build Pd, but make sure to use `gmake` (aka
 
     sudo gmake install
 
-### NetBSD {#sNetBSD}
+### NetBSD
 
 (Tested on NetBSD-9)
 

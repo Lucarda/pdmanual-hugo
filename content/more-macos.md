@@ -2,14 +2,14 @@
 [back to ch6](x6.htm#more-mac){.green} [back to table of
 contents](index.htm#s6)
 
-### 6.4.1 macOS resources {#s6.4.1}
+### macOS resources
 
 Directory pure-data/mac contains support files for building a Pure Data
 macOS application bundle and supplementary build scripts for compiling
 Pd on Macintosh systems, as it is built for the 'vanilla' releases on
 msp.ucsd.edu.
 
-### Pd macOS app {#Pd.macOS.app}
+### Pd macOS app
 
 In a nutshell, a monolithic macOS "application" is simply a directory
 structure treated as a single object by the OS. Inside this bundle are
@@ -37,7 +37,7 @@ The Pure Data GUI utilizes the Tk windowing shell aka "Wish" at runtime.
 Creating a Pure Data .app involves using a precompiled Wish.app as a
 wrapper by copying the Pd binaries and resources inside of it.
 
-### App Bundle Helpers {#App.Bundle.Helpers}
+### App Bundle Helpers
 
 -   osx-app.sh: creates a Pd .app bundle for macOS using a Tk Wish.app
     wrapper
@@ -130,7 +130,7 @@ Tk source trees. To skip applying patches, use the tcltk-wish.sh
 --no-patches commandline option. See mac/patches/README.txt for more
 info.
 
-### Supplementary Build Scripts {#Supplementary.Build.Scripts}
+### Supplementary Build Scripts
 
 -   build-macosx: builds a 32 bit Pd .app bundle using src/makefile.mac
 -   build-mac64: builds a 64 bit Pd .app bundle using src/makefile.mac
@@ -158,7 +158,7 @@ Shell.app
 A smarter version of the scripts ought to be able to find that file
 automatically on your system so I wouldn't have to include it here.
 
-### Preferences {#Preferences}
+### Preferences
 
 The Pure Data preferences are saved in the macOS "defaults" preference
 system using the following domains:
@@ -196,7 +196,7 @@ Some important per-application settings required by the GUI include:
 
 These are set in tcl/pd_guiprefs.tcl.
 
-### Code Signing {#Code.Signing}
+### Code Signing
 
 As of Pd 0.51, the mac/osx-app.sh script performs "ad-hoc code signing"
 in order to set entitlements to open un-validated dynamic libraries on

@@ -1,5 +1,5 @@
 
-## Pd Manual chapter 6: Installing from source.
+## Pd Manual: Installing from source.
 
 [back to table of contents](index.htm#s6)
 
@@ -11,7 +11,7 @@ source distribution comes with two build systems:
     most users
 -   makefile: smaller & simpler, used for Pd binary downloads
 
-### 6.1. Requirements {#s6.1}
+### Requirements 
 
 Core build requirements:
 
@@ -30,7 +30,7 @@ Optional features:
 -   JACK: audio server support
 -   FFTW: use the optimized FFTW Fast Fourier Transform library
 
-### 6.2. Autotools Build (recommended) {#s6.2}
+### Autotools Build (recommended) 
 
 Building Pd using the GNU autotools involves the following steps for all
 platforms:
@@ -151,7 +151,7 @@ want to double check which architectures Pd was built with, use the
     ...
     Pd-0.47.1.app/Contents/Resources/bin/pd: Mach-O 64-bit executable x86_64
 
-### 6.3 Linux & BSD {#s6.3}
+### Linux & BSD 
 
 Platform requirements:
 
@@ -190,7 +190,7 @@ For more information and how to build on BSD see:
 
 [Show more on BSD](x6-c.htm){#BSD .green}
 
-### 6.4. macOS {#s6.4}
+### macOS 
 
 macOS is built on top of a BSD system and the bash commandline can be
 accessed with the Terminal application in the /Applications/Utility
@@ -323,7 +323,7 @@ and use the aforementioned aliases to provide the pd command.
 
 [Show more on macOS](x6-a.htm){#more-mac .green}
 
-### 6.5. Windows {#s6.5}
+### Windows 
 
 Pd on Windows can be built with either MinGW or Cygwin which provide the
 core build requirements: a compiler chain & shell environment.
@@ -418,18 +418,18 @@ outside your Cygwin/Msys2 environment (if at all).
 
 [Show more on Windows](x6-b.htm){#more-windows .green}
 
-### 6.6. Double precision {#s6.6}
+### Double precision 
 
 As of Pd 0.51-0 you can compile a "Double precision" Pd. On the
 autotools do:
 
     ./configure CPPFLAGS="-DPD_FLOATSIZE=64"
 
-### 6.7. Other flags {#s6.7}
+### Other flags 
 
 More flags to be documented here.
 
-### 6.8. Cross-compilation for Windows on Linux {#s6.8}
+### Cross-compilation for Windows on Linux 
 
 You can also build a Windows binary of Pd on a Linux system, using a
 cross-compilation toolchain.
@@ -464,7 +464,7 @@ the instructions above in the "Windows" section:
 
     make app
 
-### 6.9. Makefile Build {#s6.9}
+### Makefile Build
 
 Alternatively, and often more simply, to the autotools build, you can
 use the fallback makefiles in the src directory:
@@ -514,7 +514,7 @@ On macOS, you can build a clickable Pd .app bundle using the
 supplemental build scripts in the mac directory. See [6.4.1 macOS
 resources](x6-a.htm). for more info.
 
-### 6.10. Reporting Bugs {#s6.10}
+### Reporting Bugs
 
 Let us know if you run into any bugs or issues with building or
 installing Pd:

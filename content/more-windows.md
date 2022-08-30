@@ -2,13 +2,13 @@
 [back to ch6](x6.htm#more-windows){.green} [back to table of
 contents](index.htm#s6)
 
-### 6.5.1 Windows resources {#s6.5.1}
+### Windows resources
 
 Directory pure-data/msw contains support files for building a Pure Data
 Windows application, as it is built for the 'vanilla' releases on
 msp.ucsd.edu.
 
-### Notes about compiling on Microsoft Windows {#Notes.about.compiling.on.Microsoft.Windows}
+### Notes about compiling on Microsoft Windows
 
 As of Pd version 0.50, all releases are compiled using Dan Wilcox's
 scripts, msw-app.sh, and optionally tcltk-dir.sh (which builds a version
@@ -37,7 +37,7 @@ your own version if you need to.
 But to first get things working, it's best to use msw-app.sh and
 tcltk-dir.sh directly.
 
-### Pd Application Directory {#Pd.Application.Directory}
+### Pd Application Directory
 
 Pd for Windows is essentially a stand-alone application directory which
 contains the compiled binaries, resource files, and contextual
@@ -60,7 +60,7 @@ runtime which is included with Pd in the /bin directory. A Pure Data app
 directory includes both the Pd binaries and resources as well as a
 precompiled Tk.
 
-### App Bundle Helpers {#App.Bundle.Helpers}
+### App Bundle Helpers
 
 -   msw-app.sh: creates a Pd app directory for Windows using precompiled
     Tcl/Tk
@@ -157,7 +157,7 @@ pdprototype.tgz tarball. To build pdfontloader, see
 [https://github.com/pure-data/pdfontloader](https://github.com/pure-data/pdfontloader){target="_blank"}
 source.
 
-### 6.5.2. Windows ASIO Support {#s6.5.2}
+### Windows ASIO Support
 
 In order to build ASIO support into Pd on Windows, you need to download
 the ASIO sources from Steinberg directly. Their license does not let us

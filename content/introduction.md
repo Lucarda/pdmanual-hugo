@@ -1,5 +1,5 @@
 
-## Pd Manual chapter 1: introduction
+## Pd Manual: introduction
 
 [back to table of contents](index.htm#s1)
 
@@ -8,7 +8,7 @@ This is the HTML documentation for the Pd computer program. Pd is free
 and can be downloaded from the internet; go to
 <http://msp.ucsd.edu/software.html> to get it.
 
-### [1.1. Guide to Pd's documentation]{#s1}
+### Guide to Pd's documentation
 
 Pd's documentation lives in the "doc" folder of the distribution and
 consists of:
@@ -62,7 +62,7 @@ To get started writing your own C extensions, refer to "6.externs".
 For more about externals, please refer to [chapter 4](x4.htm) of this
 manual.
 
-### [1.2. other resources]{#s2}
+### other resources
 
 There is a very extensive Pd community web site,
 [pure-data.info](http://www.pure-data.info/), which aims to be the

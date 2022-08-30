@@ -6,7 +6,7 @@ synthesis, and processing, with a rich set of multimedia capabilities.
 The latest version of this page can be found at:
 <http://msp.ucsd.edu/software.html>.
 
-1.  [introduction]({{< mdlink "x1" >}})
+1.  [introduction]({{< mdlink "introduction" >}})
     1.  [guide to the documentation](x1.htm#s1)
     1.  [other resources](x1.htm#s2)
 1.  [theory of operation](x2.htm){#s2}

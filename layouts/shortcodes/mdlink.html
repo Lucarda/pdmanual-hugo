@@ -1,4 +1,3 @@
-{{ $foo := .Get 0}}
-{{ $foo2 := "index.html"}}
-{{ $foo3 := .Get 1}}
-{{ printf "%s/%s%s" $foo $foo2 $foo3 }}
+{{ $foo := .Get 0 | anchorize}}
+{{ $foo2 := .Get 1 | anchorize}}
+{{ printf "%s.html#%s" $foo $foo2 }}

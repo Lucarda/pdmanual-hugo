@@ -6,3 +6,5 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 relativeURLs = 'true'
 
+uglyurls = true
+

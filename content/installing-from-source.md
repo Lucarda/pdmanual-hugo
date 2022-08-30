@@ -1,7 +1,7 @@
 
 ## Pd Manual: Installing from source.
 
-[back to table of contents](index.htm#s6)
+[back to table of contents](index.html)
 
 
 Pd is built on the commandline using traditional Unix-style tools. The
@@ -534,6 +534,6 @@ Please include information involved with your problem such as:
 
 
 
-[back to table of contents](index.htm#s6)
+[back to table of contents](index.html)
 
 

@@ -1,7 +1,7 @@
 
 ## Pd Manual: theory of operation
 
-[back to table of contents](index.htm#s2)
+[back to table of contents](index.html)
 
 
 The purpose of this chapter is to describe Pd's design and how it is
@@ -1262,8 +1262,7 @@ presentation and editing functions.
 
 
 
-[next chapter](x3.htm)
-
-[back to table of contents](index.htm#s2)
+[next chapter]({{< mdlink "getting pd to run" "">}}) \
+[back to table of contents](index.html)
 
 

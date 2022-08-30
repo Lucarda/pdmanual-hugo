@@ -1,7 +1,7 @@
 
 ## Pd Manual: externals
 
-[back to table of contents](index.htm#s4)
+[back to table of contents](index.html)
 
 
 ### Externals
@@ -529,7 +529,7 @@ can use [declare -stdpath ./] to force priority to search this folder!
 
 
 
-[next chapter](x5.htm)
-[back to table of contents](index.htm#s4)
+[next chapter]({{< mdlink "current status" "">}}) \
+[back to table of contents](index.html)
 
 

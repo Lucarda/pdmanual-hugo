@@ -1,6 +1,7 @@
 
-[back to ch6](x6.htm#more-windows){.green} [back to table of
-contents](index.htm#s6)
+[back to ch6](x6.htm#more-windows){.green} 
+
+[back to table of contents](index.html)
 
 ### Windows resources
 
@@ -172,6 +173,7 @@ Install the ASIO SDK by doing the following:
 
 Now build Pd and it should include ASIO as one of the audio backends.
 
-[back to ch6](x6.htm#more-windows){.green} [back to table of
-contents](index.htm#s6)
+[back to ch6](x6.htm#more-windows){.green} 
+
+[back to table of contents](index.html)
 

@@ -1,7 +1,7 @@
 
 ## Pd Manual: introduction
 
-[back to table of contents](index.htm#s1)
+[back to table of contents](index.html)
 
 
 This is the HTML documentation for the Pd computer program. Pd is free
@@ -90,7 +90,7 @@ such as games. Get it also via via "Find externals" or from
 
 
 
-[next chapter](x2.htm)
-[back to table of contents](index.htm#s1)
+[next chapter]({{< mdlink "theory of operation" "">}}) \
+[back to table of contents](index.html)
 
 

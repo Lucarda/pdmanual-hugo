@@ -1,7 +1,7 @@
 
 ## Pd Manual: current status
 
-[back to table of contents](index.htm#s5)
+[back to table of contents](index.html)
 
 
 This section tracks changes in Pd's current implementation.
@@ -2316,7 +2316,7 @@ Max's.
 
 
 
-[next chapter](x6.htm)
-[back to table of contents](index.htm#s5)
+[next chapter]({{< mdlink "installing from source" "">}}) \
+[back to table of contents](index.html)
 
 

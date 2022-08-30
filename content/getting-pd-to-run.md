@@ -1,7 +1,7 @@
 
 ## Pd Manual: Getting Pd to run
 
-[back to table of contents](index.htm#s3)
+[back to table of contents](index.html)
 
 
 The following are basic instructions on how to get Pd installed and
@@ -647,7 +647,7 @@ the path should work as of version 0.38.
 
 
 
-[next chapter](x4.htm)
-[back to table of contents](index.htm#s3)
+[next chapter]({{< mdlink "externals" "">}}) \
+[back to table of contents](index.html)
 
 

@@ -26,7 +26,7 @@ of this section describes how to get audio and MIDI to work.
 To test audio and MIDI, start Pd and select "test Audio and MIDI" from
 the "Media" menu. You should see a window like this:
 
-![test tone patch](fig11.1.png)
+![test tone patch](x/img/fig11.1.png)
 
 First, try to get Pd to play a sine wave over your speakers. The "TEST
 TONE" control at top left turns this on and off. Normally, all the
@@ -100,7 +100,7 @@ Selecting an API (even if it's the one already in use), or,
 alternatively, selecting "Audio Settings..." from Preferences, opens
 a dialog panel like this:
 
-![audio settings dialog](fig11.2.png)
+![audio settings dialog](x/img/fig11.2.png)
 
 The exact choices you get depend on the operating system and API. The
 sample rate controls both audio output and input. The audio throughput
@@ -404,7 +404,7 @@ The startup settings (i.e., those that take effect only when Pd is
 started) are controlled using the "startup..." dialog from the File
 menu. The dialog appears as follows:
 
-![startup dialog](fig11.3.png)
+![startup dialog](x/img/fig11.3.png)
 
 The slots at top each specify a binary "library" for Pd to load on
 startup. These may be for Gem, pdp, zexy, iemlib, cyclone, and so on.
@@ -598,7 +598,7 @@ separated by colons in Unix or semicolons in Windows.
 You can see and edit the path while Pd is running using the "path..."
 item in the "File / Preferences" menu:
 
-![startup dialog](fig11.4.png)
+![startup dialog](x/img/fig11.4.png)
 
 The path must be correctly set before you load a patch or it may fail to
 find abstractions, etc., that are needed to construct the patch. When Pd

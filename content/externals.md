@@ -4,7 +4,7 @@
 [back to table of contents](index.htm#s4)
 
 
-4. Externals
+### Externals
 
 This section explains what are external objects and libraries. It also
 describes everything on how to install and load them in Pure Data.
@@ -39,7 +39,7 @@ and then select **List of Objects**, or alternatively right click on an
 empty spot of a patch's window and select "help" - this loads the
 help-intro.pd file (see below).
 
-![](fig4.1.png)
+![](x/img/fig4.1.png)
 
 The set of externals that come with Pd are available in the 'extra'
 library and is located in a folder named "extra" inside the Pd
@@ -48,7 +48,7 @@ also be viewed in the Help Browser menu (Help => Browser). See figure
 below, which shows how the browser looks in a fresh install of Pd and
 lists the objects in the extra folder.
 
-![](fig4.2.png)
+![](x/img/fig4.2.png)
 
 ### What are the Types of External Objects?
 
@@ -153,7 +153,7 @@ it's advised to include external libraries and it's automatically
 included in the user added search paths (under Preferences => Path),
 see figure below.
 
-![](fig4.3.png)
+![](x/img/fig4.3.png)
 
 We see in the screenshot above that the "Pd" folder is created under
 ~/Documents, and inside it we have the externals subfolder. Even if you
@@ -233,7 +233,7 @@ can also look for an external name and the library that contains it
 might be shown. All available versions of the library specific for your
 operating system will be shown to you. See figure below.
 
-![](fig4.4.png)
+![](x/img/fig4.4.png)
 
 When you click on the version you want, by default Pd downloads it to
 "~/Documents/Pd/externals".
@@ -357,7 +357,7 @@ startup, you need to restart Pd so this takes effect. The startup is
 also used for configuring Pd in many ways, see [3.6. Preferences and
 startup options](x3.htm#s4) for reference.
 
-![](fig4.5.png)
+![](x/img/fig4.5.png)
 
 As we've seen with 'zexy', it's common that the name of the binary is
 the same as the library's, so you don't need to worry about adding it to
@@ -386,7 +386,7 @@ Note that when you load a library like this or via [declare -lib], all
 of its external objects are loaded in Pd and they have search priority.
 This may cause issues discussed on the next section.
 
-![](fig4.6.png)
+![](x/img/fig4.6.png)
 
 ### Slash declarations:
 
@@ -398,7 +398,7 @@ for this object in a folder called 'else' in one of its search paths
 (which includes ~/Documents/Pd/externals) and find it! Here's an
 example:
 
-![](fig4.7.png)
+![](x/img/fig4.7.png)
 
 Now, what's the need or advantage of this over using [declare] or
 adding the folder to the user added paths? This can be an option that

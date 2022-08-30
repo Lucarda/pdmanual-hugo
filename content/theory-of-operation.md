@@ -25,7 +25,7 @@ structures.
 When Pd is running, you'll see a main "Pd" window, and possibly one
 or more "canvases" or "patches". The main Pd window looks like this:
 
-![pd window](fig1.1.png)
+![pd window](x/img/fig1.1.png)
 
 The bottom part of the Pd window is an area for printout from objects in
 patches, and/or for messages from Pd itself. The menus and console font
@@ -38,7 +38,7 @@ has one main window and any number of sub-windows. The sub-windows can
 be opened and closed but are always running whether you can see them or
 not. Here is a simple Pd patch:
 
-![hello world patch](fig1.2.jpg)
+![hello world patch](x/img/fig1.2.jpg)
 
 There are four *text boxes* in this patch: a number box (showing zero),
 an object box showing "print," and two comments. The number box and
@@ -60,7 +60,7 @@ type of object Pd will make, and the other atoms, called *creation
 arguments* , tell Pd how to initialize the object. If you type for
 example,
 
-![object](fig1.3.jpg)
+![object](x/img/fig1.3.jpg)
 
 the "+" specifies the *class* of the object. In this case the object
 will be the kind that carries out addition, and the "13" initializes
@@ -85,7 +85,7 @@ arguments.
 
 Here for example is a simple MIDI synthesizer:
 
-![simple MIDI synthesizer](fig1.4.png)
+![simple MIDI synthesizer](x/img/fig1.4.png)
 
 This patch mixes *control* objects (notein, stripnote, and ftom) with
 *tilde* objects osc~, *~, and dac~. The control objects carry out
@@ -135,7 +135,7 @@ the box's outlet or to other specified receiving objects. In the
 example below, the message box, when clicked, sends the message "21"
 to an object box which adds 13 to it.
 
-![[message( --> [object] -> [number]](fig1.5.jpg)
+![message --> object -> number](x/img/fig1.5.jpg)
 
 The third box shown is a *GUI* ("graphical user interface") box. GUI
 boxes come in many forms including number boxes (as in this example),
@@ -300,7 +300,7 @@ message is checked against the receiver. If the receiver recognizes
 messages of that selector, it carries out some corresponding action. For
 instance, here is a "float" object:
 
-![float object](fig3.1.jpg)
+![float object](x/img/fig3.1.jpg)
 
 The two rectangles at the top are usually both called "inlets" but the
 one at the left directs incoming messages to the "float" object
@@ -325,7 +325,7 @@ yet others. So each message sets off a tree of consequent messages. This
 tree is executed in depth first fashion. For instance in the patch
 below:
 
-![depth first message passing](fig3.2.jpg)
+![depth first message passing](x/img/fig3.2.jpg)
 
 the order of arrival of messages is either A-B-C-D or A-C-D-B. The "C"
 message is not done until the "D" one is also, and the "A" is not
@@ -335,7 +335,7 @@ Max, it's automatically sorted right to left).
 
 Message-passing can give rise to infinite loops of the sort shown here:
 
-![infinite message passing loop](fig3.3.jpg)
+![infinite message passing loop](x/img/fig3.3.jpg)
 
 Here the left-hand "+" can't finish processing until the right-hand
 one has been sent the result "2", which can't finish processing that
@@ -355,7 +355,7 @@ inlet as "hot" in the sense that messages to left inlets can result in
 output messages. So the following is a legal (and reasonable) loop
 construct:
 
-![hot and cold inlets](fig3.4.jpg)
+![hot and cold inlets](x/img/fig3.4.jpg)
 
 Here the "f" is an abbreviation for "float". Note that the "+ 1"
 output is connected to the right-hand inlet of "f". This "cold"
@@ -376,7 +376,7 @@ of a single object. In this case it is indeterminate which order the two
 inlets will receive their messages. Suppose for example you wish to use
 "+" to double a number. The following is incorrect:
 
-![incorrect inlet connection](fig3.5.jpg)
+![incorrect inlet connection](x/img/fig3.5.jpg)
 
 Here, I connected the left inlet before connecting the right hand one
 (although this is not evident in the appearance of the patch.) The "+"
@@ -390,7 +390,7 @@ without crossing wires, the second object will get its leftmost inlet
 last, which is usually what you want. Here is how to use "trigger" to
 disambiguate the previous example:
 
-![trigger to disambiguate](fig3.6.jpg)
+![trigger to disambiguate](x/img/fig3.6.jpg)
 
 "Cold" (non-leftmost) inlets are almost universally used to store
 single values (either numbers or symbols.) With the exception of
@@ -410,7 +410,7 @@ message box is activated, either by clicking on it or sending something
 to its inlet, the message or messages are sent, either to the message
 box's outlet or elsewhere as specified.
 
-![message boxes](fig3.7.jpg)
+![message boxes](x/img/fig3.7.jpg)
 
 The first of the message boxes above contains the single number 1.5;
 this message has an implicit selector of "float." The second is a list
@@ -419,7 +419,7 @@ the two arguments are the number 5 and the symbol "toes."
 
 Multiple messages may be separated by commas as shown:
 
-![multiple messages in one box](fig3.8.jpg)
+![multiple messages in one box](x/img/fig3.8.jpg)
 
 Here the three messages are the numbers 1, 2, and 3, and they are sent
 in sequence (with no intervening time between them, as with the
@@ -436,7 +436,7 @@ leading semicolon immediately redirects messages from the outlet to an
 object named "fred" (which is here a receive object), and likewise the
 next message is sent to "sue."
 
-![semicolons to send messages](fig3.9.jpg)
+![semicolons to send messages](x/img/fig3.9.jpg)
 
 Certain other objects (Pd windows, for example, and arrays) have Pd
 names and can be sent messages this way. Also, the special object "pd"
@@ -444,7 +444,7 @@ is defined to which you may send messages to start and stop DSP.
 
 You can put variables in message boxes as shown below:
 
-![variables in message boxes](fig3.10.jpg)
+![variables in message boxes](x/img/fig3.10.jpg)
 
 Here, "$1", etc., refer to the arguments of the arriving message (and
 aren't defined if you send a "bang" message or if you click on the
@@ -787,11 +787,11 @@ as an object box in a patch. If you type "pd" or "pd my-name" into
 an object box, this creates a one-off subpatch. For instance, in this
 fragment:
 
-![subpatch](fig7.1.jpg)
+![subpatch](x/img/fig7.1.jpg)
 
 the box in the middle, if clicked on, opens the sub-patch shown here:
 
-![open subpatch window](fig7.2.jpg)
+![open subpatch window](x/img/fig7.2.jpg)
 
 The contents of the subpatch are saved as part of the parent patch, in
 one file. If you make several copies of a subpatch you may change them
@@ -813,12 +813,12 @@ To make an abstraction, save a patch with a name such as
 "abstraction1.pd" and then invoke it as "abstraction1" in an object
 box:
 
-![abstraction](fig7.3.jpg)
+![abstraction](x/img/fig7.3.jpg)
 
 Here we're invoking a separate file, "abstraction1.pd", which holds
 the patch shown here (the border is the same as for the subpatch above):
 
-![abstraction example](fig7.4.jpg)
+![abstraction example](x/img/fig7.4.jpg)
 
 You may create many instances of "abstraction1" or invoke it from
 several different patches; and changing the contents of "abstraction1"
@@ -856,11 +856,11 @@ you can check the "graph on parent" box to have the controls of the
 subpatch/abstraction appear on the parent. For instance, here is an
 invocation of "abstraction2":
 
-![graph-on-parent abstraction](fig7.5.jpg)
+![graph-on-parent abstraction](x/img/fig7.5.jpg)
 
 where the patch "abstraction2.pd" contains:
 
-![inside graph-on-parent abstraction](fig7.6.jpg)
+![inside graph-on-parent abstraction](x/img/fig7.6.jpg)
 
 Here, the number box in the abstraction shows up on the box that invoked
 the abstraction. The "graph on parent" flag is set in the abstraction
@@ -912,17 +912,17 @@ drawn on the containing patch), or as a regular subpatch (which you see
 as a text box.) In the "graph on parent" form, an array appears as
 shown:
 
-![array](fig8.1.jpg)
+![array](x/img/fig8.1.jpg)
 
 Arrays are indexed from 0 to N-1 where N is the number of points in the
 array. You can read an array value using the tabread object:
 
-![array indexing](fig8.2.jpg)
+![array indexing](x/img/fig8.2.jpg)
 
 Here we see that the third point of the array (index 2) has the value
 0.4. To write into the array you can use the tabwrite object:
 
-![setting an value in an array](fig8.3.jpg)
+![setting an value in an array](x/img/fig8.3.jpg)
 
 In this example, sending the message sets the third element to 0.5. (You
 may also send the two numbers to the two inlets separately.)
@@ -932,7 +932,7 @@ from and to arrays. These may also be done using audio signals. For
 example, the patch below creates a 440 Hz. tone with "array1" as a
 waveform:
 
-![setting an array with a waveform](fig8.4.jpg)
+![setting an array with a waveform](x/img/fig8.4.jpg)
 
 Here phasor~'s outputs a sawtooth wave, repeating 440 times per
 second, whose output range is from 0 to 1. The multiplier and adder
@@ -951,7 +951,7 @@ If you select "properties" on an array in a graph, you two dialogs,
 one for the array and one for the graph. The array dialog looks like
 this:
 
-![array properties window](fig8.5.jpg)
+![array properties window](x/img/fig8.5.jpg)
 
 You may use this to change the name and size, in addition to another
 property, "save contents". If "save contents" is selected, the
@@ -968,7 +968,7 @@ serve).
 
 The graph dialog (which also pops up) is shown here:
 
-![graph properties](fig8.6.jpg)
+![graph properties](x/img/fig8.6.jpg)
 
 The X bounds initially range from 0 to the number of points in the table
 minus one (this is a good choice for arrays, although graphs holding
@@ -1010,7 +1010,7 @@ imported from files, generated algorithmically, or derived from analyses
 of incoming sounds or other data streams. Here is one simple example of
 a very short musical sketch realized using Pd:
 
-![graphical score](fig9.1.jpg)
+![graphical score](x/img/fig9.1.jpg)
 
 The example, which only lasts a few seconds, is a polyphonic collection
 of time-varying noise bands. The graphical "score" consists of six
@@ -1035,7 +1035,7 @@ colored ones.) This is all specified by the user using Pd's
 
 Here is the template associated with the graphical objects shown above:
 
-![template for graphical score](fig9.2.jpg)
+![template for graphical score](x/img/fig9.2.jpg)
 
 Templates consist of a data structure definition (the "struct" object)
 and zero or more drawing instructions ("filledpolygon" and "plot").
@@ -1077,7 +1077,7 @@ elements of data structures for getting and setting. Here is a patch
 showing how these facilities could be used, for example, to sequence the
 graphical score shown above:
 
-![traversal example patch](fig9.3.jpg)
+![traversal example patch](x/img/fig9.3.jpg)
 
 Pd has no built-in sequencer, nor even any notion that "x" values
 should be used as a time axis. (However, a "sort" function is

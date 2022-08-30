@@ -20,7 +20,7 @@ simultaneous computer animation and computer audio. Second, an
 experimental facility is provided for defining and accessing data
 structures.
 
-### the main window, canvases, and printout
+### main window, canvases, and printout
 
 When Pd is running, you'll see a main "Pd" window, and possibly one
 or more "canvases" or "patches". The main Pd window looks like this:

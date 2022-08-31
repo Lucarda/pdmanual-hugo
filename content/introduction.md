@@ -42,11 +42,11 @@ consists of:
 This Manual has six sections:
 
 1.  this introduction
-2.  [a theory of operations, explaining how Pd works](x2.htm)
-3.  [instructions on installing Pd and getting it to run](x3.htm)
-4.  [externals](x4.htm)
-5.  [release notes and known bugs](x5.htm)
-6.  [installing from source](x6.htm)
+1.  [a theory of operations, explaining how Pd works]({{< mdlink "theory of operation" "">}})
+1.  [instructions on installing Pd and getting it to run]({{< mdlink "getting Pd to run" "">}})
+1.  [externals]({{< mdlink "externals" "">}})
+1.  [installing from source]({{< mdlink "installing from source" "">}})
+1.  [release notes and known bugs]({{< mdlink "current status" "">}})
 
 For a list of all the objects you can use menu **Help/List of objects**.
 To get help on any Pd object you can right click on it; or you can
@@ -59,8 +59,8 @@ appear in subdirectories named "2.control.examples",
 in "7.stuff" might also be helpful.
 
 To get started writing your own C extensions, refer to "6.externs".
-For more about externals, please refer to [chapter 4](x4.htm) of this
-manual.
+For more about externals, please refer to the [externals]({{< mdlink "externals" "">}}) 
+section of this manual.
 
 ### other resources
 

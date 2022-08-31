@@ -118,7 +118,7 @@ more than one, hit "use multiple devices" and you'll be allowed up to
 4 in and 4 out. Each audio device is 2 channels by default, but you may
 specify more if your hardware supports it. Other parameters may be
 tweaked using the command line; see under [preferences and startup
-options](#s4) .
+options]({{< mdlink "getting Pd to run" "preferences and startup options">}}) .
 
 ###### MIDI
 
@@ -388,9 +388,9 @@ Pd's menus. Others take effect only when Pd starts up; some of these
 appear on the "startup" dialog and some of them, too cranky to put in
 a GUI, must be typed as *command line arguments* .
 
-In addition to the Audio and MIDI settings (see [Audio and MIDI](#s1.0)
+In addition to the Audio and MIDI settings (see [Audio and MIDI]({{< mdlink "getting Pd to run" "Audio and MIDI">}})
 ), you can customize font size (from the "edit" menu), directories to
-search for files (see [How Pd searches for files](#s5) ), and additional
+search for files (see [How Pd searches for files]({{< mdlink "getting Pd to run" "how Pd searches for files">}}) ), and additional
 startup parameters described below.
 
 All of these settings may be saved automatically between Pd sessions. It
@@ -411,7 +411,7 @@ startup. These may be for Gem, pdp, zexy, iemlib, cyclone, and so on.
 Typically, a single binary object (an "extern") is left for Pd to load
 automatically; startup library loading is appropriate for collections of
 many objects specified by a single binary library. ( See
-4.[Externals](x4.htm) for more on externals and how to load them)
+[Externals]({{< mdlink "externals" "">}}) for more on externals and how to load them)
 
 The "defeat real-time scheduling" control, if enabled, makes Pd run
 without its usual effort to become a real-time process (whatever this
@@ -638,7 +638,7 @@ system.
 A filename specified in a patch with any "/" characters in it (such as
 "../sounds/sample1.wav") causes Pd to to look both in the path and
 relative to the directory containing the patch. You may also invoke
-externs that way. ( See 4.[Externals](x4.htm) for more on externals and
+externs that way. ( See [Externals]({{< mdlink "externals" "">}}) for more on externals and
 how to load them)
 
 As of version 0.35, there may be spaces in the path to Pd itself; also,

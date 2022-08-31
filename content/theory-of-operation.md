@@ -6,9 +6,10 @@
 
 The purpose of this chapter is to describe Pd's design and how it is
 supposed to work. Practical details about how to obtain, install, and
-run Pd are described in the [next chapter](x3.htm). Links to more
-extensive guides (and to more theoretical information about computer
-music) can be found in the [previous chapter](x1.htm).
+run Pd are described in the [next chapter]({{< mdlink "getting Pd to run" "">}}). 
+Links to more extensive guides (and to more theoretical information 
+about computer music) can be found in the 
+[previous chapter]({{< mdlink "introduction" >}}).
 
 ### overview
 
@@ -95,7 +96,7 @@ computation. The result of the computation is, when the note happens to
 be a "note on" (and not a "note off", to compute the frequency in
 cycles per second and pass it on to the oscillator ("osc~").
 
-The second half of the patch, the osc~, *~, and dac~ objects,
+The second half of the patch, the osc~, \*~, and dac~ objects,
 compute audio samples, in the same way as an analog synthesizer works.
 The osc~ object is acting as the interface between the two regimes, in
 that it takes control messages to set its frequency but talks to
@@ -144,7 +145,7 @@ message box is static when a patch is running, a number box's contents
 (the text) changes to reflect the current value held by the box. You can
 also use a number box as a control by clicking and dragging up and down,
 or by typing values in it. (There are also shift- and alt-click actions;
-see [getting help](x2.htm#s2.7) to find out how to look this up).
+see [getting help]({{< mdlink "theory of operation" "popup menu for properties, open, and help">}}) to find out how to look this up).
 
 In addition to numbers, Pd defines GUI boxes to display and edit symbols
 or arbitrary lists of atoms.
@@ -609,7 +610,7 @@ The Pd scheduler maintains a (user-specified) lead on its computations;
 that is, it tries to keep ahead of real time by a small amount in order
 to be able to absorb unpredictable, momentary increases in computation
 time. This is specified using the "audiobuffer" or "frags" command
-line flags (see [getting Pd to run](x3.htm){#s3} ).
+line flags (see [getting Pd to run]({{< mdlink "getting Pd to run" "">}}) ).
 
 If Pd gets late with respect to real time, gaps (either occasional or
 frequent) will appear in both the input and output audio streams. On the

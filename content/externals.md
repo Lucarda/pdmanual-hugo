@@ -1,3 +1,6 @@
+---
+title: externals
+---
 
 ## Pd Manual: externals
 

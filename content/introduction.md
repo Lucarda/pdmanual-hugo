@@ -1,3 +1,6 @@
+---
+title: introduction
+---
 
 ## Pd Manual: introduction
 

@@ -1,3 +1,6 @@
+---
+title: more on macOS
+---
 
 [back to table of contents](index.html) \
 {{< green-button "back to 'installing from source'" "installing from source" "macOS">}}

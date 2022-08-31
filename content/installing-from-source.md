@@ -1,3 +1,6 @@
+---
+title: installing from source
+---
 
 ## Pd Manual: Installing from source.
 

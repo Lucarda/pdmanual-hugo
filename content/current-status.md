@@ -1,3 +1,6 @@
+---
+title: current status
+---
 
 ## Pd Manual: current status
 
@@ -1076,7 +1079,7 @@ the "File" menu.
 A "vline" object acts like "line" but to sub-sample accuracy. See
 the audio example, C04.control.to.signal.pd (and/or chapter 3 of [Theory
 and Techniques of Electronic Music
-).](http://msp.ucsd.edu/techniques.htm){<i=""}
+).](http://msp.ucsd.edu/techniques.htm)
 
 The block~/switch~ object now takes a "set" message to dynamically
 change block size, etc.
@@ -2233,7 +2236,7 @@ delay, metro, timer; send, receive.
 ### known bugs
 
 These are now tracked on the [Pd GitHub project
-page](https://github.com/pure-data/pure-data/issues){target="_blank"}.
+page](https://github.com/pure-data/pure-data/issues).
 
 ### differences from Max/MSP
 
@@ -2264,7 +2267,7 @@ from the abstraction itself in that "#1", etc., are replaced by the
 instantiation arguments. In Pd, these arguments appear as "$1", etc,
 and are translated at a slightly later stage of the instantiation
 process so that you still see them as "$" variables in the
-instantiation. [(see Section 2.7. abstractions)](x2.htm#s7.1)
+instantiation. See section [(abstractions)]({{< mdlink "theory of operation" "abstractions">}}).
 
 In Pd, to make current all instantiations of the abstraction, either
 delete and recreate them or close and open the patch; this is done
@@ -2315,8 +2318,6 @@ subpatches, in Pd; however, Pd's version is quite different from
 Max's.
 
 
-
-[next chapter]({{< mdlink "installing from source" "">}}) \
 [back to table of contents](index.html)
 
 

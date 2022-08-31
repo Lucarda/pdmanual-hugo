@@ -1,3 +1,6 @@
+---
+title: theory of operation
+---
 
 ## Pd Manual: theory of operation
 

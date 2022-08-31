@@ -1,3 +1,6 @@
+---
+title: getting Pd to run
+---
 
 ## Pd Manual: Getting Pd to run
 

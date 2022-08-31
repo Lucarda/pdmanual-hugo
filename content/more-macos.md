@@ -1,7 +1,6 @@
 
-[back to ch6](x6.htm#more-mac){.green} 
-
-[back to table of contents](index.html)
+[back to table of contents](index.html) \
+{{< green-button "back to 'installing from source'" "installing from source" "macOS">}}
 
 ### macOS resources
 
@@ -206,6 +205,6 @@ ad-hoc signing doesn't actually sign the .app bundle with an account
 certificate, so the unidentified developer warning is still shown when
 the downloaded .app is run for the first time.
 
-[back to ch6](x6.htm#more-mac){.green} \
+{{< green-button "back to 'installing from source'" "installing from source" "macOS">}} \
 [back to table of contents](index.html)
 

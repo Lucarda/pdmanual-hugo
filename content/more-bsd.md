@@ -1,7 +1,6 @@
 
-[back to ch6](x6.htm#BSD){.green} 
-
-[back to table of contents](index.html)
+[back to table of contents](index.html) \
+{{< green-button "back to 'installing from source'" "installing from source" "Linux & BSD">}}
 
 ### BSD
 
@@ -109,6 +108,5 @@ autotools build steps to build Pd, but make sure to use `gmake` (aka
 
     sudo gmake install
 
-[back to ch6](x6.htm#BSD){.green} 
-
+{{< green-button "back to 'installing from source'" "installing from source" "Linux & BSD">}} \
 [back to table of contents](index.html)

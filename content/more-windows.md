@@ -1,7 +1,6 @@
 
-[back to ch6](x6.htm#more-windows){.green} 
-
-[back to table of contents](index.html)
+[back to table of contents](index.html) \
+{{< green-button "back to 'installing from source'" "installing from source" "Windows">}}
 
 ### Windows resources
 
@@ -155,7 +154,7 @@ successful, tries to load the included Pd font.
 
 Currently, pdfontloader.dll is pre-built and included within the
 pdprototype.tgz tarball. To build pdfontloader, see
-[https://github.com/pure-data/pdfontloader](https://github.com/pure-data/pdfontloader){target="_blank"}
+[https://github.com/pure-data/pdfontloader](https://github.com/pure-data/pdfontloader)
 source.
 
 ### Windows ASIO Support
@@ -166,14 +165,13 @@ redistribute their source files.
 
 Install the ASIO SDK by doing the following:
 
--   1. Download the ASIO SDK:
-    [https://www.steinberg.net/en/company/developer.html](https://www.steinberg.net/en/company/developer.html){target="_blank"}
--   2. Uncompress asiosdk2.3.zip (or higher) into pure-data/asio/
--   3. remove the version number so that you get pure-data/asio/ASIOSDK
+  - Download the ASIO SDK:
+    [https://www.steinberg.net/en/company/developer.html](https://www.steinberg.net/en/company/developer.html)
+  - Uncompress `asiosdk2.3.zip` (or higher) into `pure-data/asio/`
+  - remove the version number so that you get `pure-data/asio/ASIOSDK`
 
 Now build Pd and it should include ASIO as one of the audio backends.
 
-[back to ch6](x6.htm#more-windows){.green} 
-
+{{< green-button "back to 'installing from source'" "installing from source" "Windows">}} \
 [back to table of contents](index.html)
 

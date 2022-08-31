@@ -35,10 +35,10 @@ Optional features:
 Building Pd using the GNU autotools involves the following steps for all
 platforms:
 
--   1. configure: detect & set library and platform options
--   2. make: compile Pd, associated tools, and resource files (ie.
+  1. configure: detect & set library and platform options
+  1. make: compile Pd, associated tools, and resource files (ie.
     translations)
--   3. install: install the Pd binaries and resources onto your system
+  1. install: install the Pd binaries and resources onto your system
 
 Overview:
 
@@ -207,7 +207,7 @@ build steps to build Pd.
 
 For more information and how to build on BSD see:
 
-[Show more on BSD](x6-c.htm){#BSD .green}
+{{< green-button "Show more on BSD" "more-bsd" "">}}
 
 ### macOS 
 
@@ -224,17 +224,17 @@ running the following:
 
 If you are running macOS 10.6 - 10.8, you will need to install Xcode
 from the Mac App Store or downloaded from
-[http://developer.apple.com](http://developer.apple.com){target="_blank"}
+[http://developer.apple.com](http://developer.apple.com)
 
 Tcl/Tk is already included macOS.
 
 To install the autotools, gettext, and libraries for additional
 features, you can use one of the open source package managers for macOS:
 
--   homebrew: [https://brew.sh](https://brew.sh){target="_blank"}
+-   homebrew: [https://brew.sh](https://brew.sh)
     (recommended)
 -   macports:
-    [https://www.macports.org](https://www.macports.org){target="_blank"}
+    [https://www.macports.org](https://www.macports.org)
 
 Follow the package manager set up instructions and then install the
 software you need. For example, to install the autotools & gettext using
@@ -273,7 +273,7 @@ architectures directly:
 
 The JACK audio server is supported by Pd on macOS. By default, Pd can
 use the Jack OS X runtime framework from
-[http://www.jackosx.com](http://www.jackosx.com){target="_blank"} if it
+[http://www.jackosx.com](http://www.jackosx.com) if it
 is installed on the system. Optionally, Pd can also be built with Jack
 installed via Homebrew or Macports, however the runtime framework
 support must be disabled:
@@ -293,21 +293,19 @@ To build the Pd macOS application, simply run:
 
 This builds Pd-#.##.#.app in the Pd source directory which can be then
 be double-clicked and/or copied to /Applications. For more info &
-options regarding the Pd .app bundle, see [6.4.1 macOS
-resources](x6-a.htm).
+options regarding the Pd .app bundle, see [macOS resources]({{< mdlink "more-macos" "">}}).
 
 If you want to have both the Pd application *and* use Pd from the
 commandline, add command aliases to the binaries inside the .app to your
 ~/.bash_profile:
 
 #### pd commandline
-
-WHICHPD="Pd-0.47-1" alias
-pd="/Applications/[$WHICHPD.app/Contents/Resources/bin/pd" alias
-pdsend="/Applications/$]{.math}WHICHPD.app/Contents/Resources/bin/pdsend"
-alias
-pdreceive="/Applications/$WHICHPD.app/Contents/Resources/bin/pdreceive"
-
+```
+WHICHPD="Pd-0.47-1"
+alias pd="/Applications/$WHICHPD.app/Contents/Resources/bin/pd"
+alias pdsend="/Applications/$WHICHPD.app/Contents/Resources/bin/pdsend"
+alias pdreceive="/Applications/$WHICHPD.app/Contents/Resources/bin/pdreceive"
+```
 Next, reload the profile by either opening a new Terminal window or
 running:
 
@@ -340,7 +338,7 @@ hints (such as retina rendering) which are specified by the Info.plist
 file inside the .app bundle. Again, it is recommended to build a .app
 and use the aforementioned aliases to provide the pd command.
 
-[Show more on macOS](x6-a.htm){#more-mac .green}
+{{< green-button "Show more on macOS" "more-macos" "">}}
 
 ### Windows 
 
@@ -351,9 +349,9 @@ It is recommended to use the Msys2 distribution which provides both a
 Unix command shell and MinGW. Download the Msys2 "x86_64" 64 bit
 installer (or "i686" if you are using 32 bit Windows) from:
 
-[http://www.msys2.org/](http://www.msys2.org/){target="_blank"}
+[http://www.msys2.org/](http://www.msys2.org/)
 
-Then install to the default location (C:32 or C:64) and follow the
+Then install to the default location and follow the
 setup/update info on the Msys2 webpage.
 
 Msys2 provides both 32 and 64 MinGW and command shells. As of Pd 0.50,
@@ -412,8 +410,9 @@ For example, to build Pd without MMIO support:
     ./configure --disable-mmio
 
 Note: Because of license restrictions, Pd cannot distribute the ASIO SDK
-source files. If you want to build Pd with ASIO support, see [6.5.2
-Windows ASIO Support](x6-b.htm#s6.5.2) for further instructions.
+source files. If you want to build Pd with ASIO support, see 
+[Windows ASIO support]({{< mdlink "more-windows" "Windows ASIO Support">}}) 
+for further instructions.
 
 Once built Pd is built, you can either:
 
@@ -428,14 +427,14 @@ which should run out of the box. To build, simply use:
 This will create a "pd-VERSION" directory (ie. pd-0.48.1) which can
 then be used by running pd.exe in the bin directory and placed wherever
 on your system. For more info & options regarding the Pd app directory,
-see [6.5.1 Windows resources.](x6-b.htm)
+see [Windows resources]({{< mdlink "more-windows" "Windows resources">}})
 
 To build a .msi Windows installer for Pd, see msw/build-nsi.sh.
 
 Note: The standard "make install" requires Tcl/Tk and won't work
 outside your Cygwin/Msys2 environment (if at all).
 
-[Show more on Windows](x6-b.htm){#more-windows .green}
+{{< green-button "Show more on Windows" "more-windows" "">}}
 
 ### Double precision 
 
@@ -530,8 +529,8 @@ If want to uninstall, simply run the "uninstall" makefile target:
     make -f makefile.gnu uninstall
 
 On macOS, you can build a clickable Pd .app bundle using the
-supplemental build scripts in the mac directory. See [6.4.1 macOS
-resources](x6-a.htm). for more info.
+supplemental build scripts in the mac directory. See 
+[macOS resources]({{< mdlink "more-macos" "">}}) for more info.
 
 ### Reporting Bugs
 
@@ -539,11 +538,11 @@ Let us know if you run into any bugs or issues with building or
 installing Pd:
 
 -   send an email to the Pd-List:
-    [https://lists.puredata.info/listinfo/pd-list](https://lists.puredata.info/listinfo/pd-list){target="_blank"}
+    [https://lists.puredata.info/listinfo/pd-list](https://lists.puredata.info/listinfo/pd-list)
 -   open an issue:
-    [https://github.com/pure-data/pure-data/issues](https://github.com/pure-data/pure-data/issues){target="_blank"}
+    [https://github.com/pure-data/pure-data/issues](https://github.com/pure-data/pure-data/issues)
 -   post to the Pd forum:
-    [https://forum.pdpatchrepo.info](https://forum.pdpatchrepo.info){target="_blank"}
+    [https://forum.pdpatchrepo.info](https://forum.pdpatchrepo.info)
 
 Please include information involved with your problem such as:
 
@@ -552,7 +551,7 @@ Please include information involved with your problem such as:
 -   steps you took: configuration options, etc
 
 
-
+[next chapter]({{< mdlink "current status" "">}}) \
 [back to table of contents](index.html)
 
 

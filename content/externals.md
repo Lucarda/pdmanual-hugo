@@ -122,15 +122,15 @@ binaries**, but also includes a small collection of 12 objects as a
 ### Wrapping up Part 1)
 
 -   **Internal objects:** Objects that are part of Pd Vanilla's binary.
--   **External objects:** Objects that are [NOT]{.underline} part of Pd
+-   **External objects:** Objects that are __NOT__ part of Pd
     Vanilla's binary.
 -   **Vanilla objects:** Built-in objects in the Pd Vanilla distribution
     (including internals and a small collection of externals - the
     "extra" objects).
 -   **Types of external objects:** Compiled binaries or Abstractions.
 -   **External Library:** Collection of external objects in any form, be
-    it a [single binary pack]{.underline} containing several objects, a
-    [set of separate binaries]{.underline} / abstractions or any
+    it a _"single binary pack"_ containing several objects, a
+    _"set of separate binaries"_ / _abstractions_ or any
     combination of them.
 
 
@@ -164,14 +164,14 @@ Externals can actually be anywhere in your computer, but Pd must know
 where to look for them. Pd looks for files (including externals) in the
 user added search paths, but it also searches in other folders not
 listed there such as: the same folder that your patch is saved on (the
-[Relative Path]{.underline}) and the [Standard Paths]{.underline}, which
+**Relative Path**) and the **Standard Paths**, which
 are:
 
--   A) [Application-specific]{.underline}: The "extra" folder inside
+-   A) **Application-specific**: The "extra" folder inside
     a particular Pure Data application.
--   B) [User-specific]{.underline}: A system folder for a specific user
+-   B) **User-specific**: A system folder for a specific user
     in the machine.
--   C) [Global]{.underline}: A system folder for all users on the
+-   C) **Global**: A system folder for all users on the
     machine.
 
 Officially, there's only one 'Standard Path' which is the 'extra'
@@ -180,10 +180,10 @@ an old structure. Currently, the best practice is to use the default
 external folders or user added paths, but these other options are
 documented here anyway and may be useful in some edge cases.
 
-The [Global]{.underline} folder affects all Pure Data Applications for
-all users. The [User-specific]{.underline} folder affects all Pure Data
+The **Global** folder affects all Pure Data Applications for
+all users. The **User-specific** folder affects all Pure Data
 Applications for that user. And since you can have different versions of
-Pd installed in your system, the [Application-specific]{.underline}
+Pd installed in your system, the **Application-specific**
 folder affects only that particular Pd Application - multiple Pd
 applications can be of different versions (an older and a newer one or
 both 32-bit and 64-bit). For reference, here's the list of the Standard
@@ -191,36 +191,36 @@ Paths for all operating systems:
 
 A) macOS:
 
--   [Application-specific]{.underline}:
-    [**/$PdPath/Contents/Resources/extra**]{.mark} - this is inside the
-    Pd Application (like Pd-0.49-1 in ~/Applications); right click it
+-   **Application-specific**:
+    `/$PdPath/Contents/Resources/extra` - this is inside the
+    Pd Application (like Pd-0.49-1 in `~/Applications`); right click it
     and choose "Show Package Contents", then navigate to
-    "Resources/extra".
--   [User-specific]{.underline}: [**~/Library/Pd**]{.mark}
-    (/Users/user_name/Library/Pd)
--   [Global]{.underline}: [**/Library/Pd**]{.mark}
+    `Resources/extra`.
+-   **User-specific**: `~/Library/Pd`
+    (`/Users/user_name/Library/Pd`)
+-   **Global**: `/Library/Pd`
 
 B) Windows:
 
--   [Application-specific]{.underline}: [
-    **%ProgramFiles(x86)%Pdextra**]{.mark} (for 64-bit OS and 32-bit
-    Pd) or %ProgramFiles%Pdextra; this is inside the Pd Application
-    (usually in C:Program Files). This folder needs to be set to
+-   **Application-specific**: 
+    `%ProgramFiles(x86)%\Pd\extra` (for 64-bit OS and 32-bit
+    Pd) or `%ProgramFiles%\Pd\extra`; this is inside the Pd Application
+    (usually in `C:\Program Files`). This folder needs to be set to
     writeable.
--   [User-specific]{.underline}: [ **%AppData%Pd**]{.mark} (usually in
-    C:Usersuser_nameAppDataRoamingPd).
--   [Global]{.underline}: [ **%CommonProgramFiles%Pd**]{.mark}
-    (usually in C:Program FilesCommon FilesPd).
+-   **User-specific**: `%AppData%\Pd` (usually in
+    `C:\Users\user_name\AppData\Roaming\Pd`).
+-   **Global** `%CommonProgramFiles%\Pd`
+    (usually in `C:\Program Files\Common Files\Pd`).
 
 C) GNU/Linux:
 
--   [Application-specific]{.underline}: [ **/usr/lib/pd/extra**]{.mark}
+-   **Application-specific**: `/usr/lib/pd/extra`
     if installed via a package manager (apt-get) or
-    /usr/local/lib/pd/extra if compiled by yourself.
--   [User-specific]{.underline}: [ **~/.local/lib/pd/extra**]{.mark}
-    (preferred since version Pd-0.47-1) or ~/pd-externals (deprecated
+    `/usr/local/lib/pd/extra` if compiled by yourself.
+-   **User-specific**: `~/.local/lib/pd/extra`
+    (preferred since version Pd-0.47-1) or `~/pd-externals` (deprecated
     but still usable).
--   [Global]{.underline}: [ **/usr/local/lib/pd-externals**]{.mark}.
+-   **Global**: `/usr/local/lib/pd-externals`
 
 ### How to Download Externals from Pd Vanilla?
 
@@ -236,7 +236,7 @@ operating system will be shown to you. See figure below.
 ![](x/img/fig4.4.png)
 
 When you click on the version you want, by default Pd downloads it to
-"~/Documents/Pd/externals".
+`~/Documents/Pd/externals`.
 
 
 ------------------------------------------------------------------------
@@ -284,14 +284,14 @@ other possible search places if nothing is found.
 But where does Pd look for the 'else' folder? Well, the -path flag is
 first meant to search in the Relative Path, but if it doesn't find it,
 it falls back to the User Added Paths and Standard Paths. So let's say
-you put the ELSE library folder in "~/Documents/Pd/externals", which is
+you put the ELSE library folder in "`~/Documents/Pd/externals`", which is
 the current best practice, Pd will know to look for it there and will
 find it!
 
 Now, in the case of a single external, the best practice is to include
-it in a folder with the same name in "~/Documents/Pd/externals". An
+it in a folder with the same name in "`~/Documents/Pd/externals`". An
 example, the freeverb~ external should be in
-"~/Documents/Pd/externals/freeverb~". In this situation, you don't
+"`~/Documents/Pd/externals/freeverb~"`. In this situation, you don't
 need to add the external folder to the path, manually or use
 [declare]. This is because when you tell Pd to look for an external,
 if it finds a folder with the same name as the external, it'll know to
@@ -302,11 +302,11 @@ search inside that folder for the external!
 The '-lib' flag is needed for the classic Pd library format, which is
 a single binary pack with many externals. One such example is the
 [zexy](https://git.iem.at/pd/zexy/) library. So you should download and
-have the 'zexy' folderr in "~/Documents/Pd/externals/zexy". Now you
+have the 'zexy' folder in "`~/Documents/Pd/externals/zexy`". Now you
 can use [declare -lib zexy] to load the external binary. In the same
 way as explained with the freeverrb~ example, the binary is inside a
 folder with the same name. So Pd will search for the external in
-"~/Documents/Pd/externals", will find the 'zexy' folder and know to
+"`~/Documents/Pd/externals`", will find the 'zexy' folder and know to
 search for the zexy binary in it. This means you don't need to bother
 in using [declare] to define the search path.
 
@@ -336,7 +336,7 @@ add a path in your own system if you know exactly what you have and what
 you need.
 
 We've seen that even if you have a folder into
-"~/Documents/Pd/externals" you still need to tell Pd to look for it.
+"`~/Documents/Pd/externals`" you still need to tell Pd to look for it.
 You can manually add a User Added Paths in Preferences => Path by
 clicking "New".
 
@@ -354,17 +354,17 @@ the path relative to the patch will always have top priority!
 load on startup"*. This is where you can manually and permanently load
 single binary pack libraries. But since they're only needed during
 startup, you need to restart Pd so this takes effect. The startup is
-also used for configuring Pd in many ways, see [3.6. Preferences and
-startup options](x3.htm#s4) for reference.
+also used for configuring Pd in many ways, see [Preferences and
+startup options]({{< mdlink "getting Pd to run" "preferences and startup options">}}) for reference.
 
 ![](x/img/fig4.5.png)
 
 As we've seen with 'zexy', it's common that the name of the binary is
 the same as the library's, so you don't need to worry about adding it to
 the path. Another example is the 'cyclone' library. As previously
-mentioned, Cyclone includes objects as abstractions, as a [set of
-separate binaries]{.underline} and also has a set a [single binary
-pack]{.underline} (which loads objects with non alphanumeric names that
+mentioned, Cyclone includes objects as abstractions, as a **set of
+separate binaries** and also has a set a **single binary
+pack** (which loads objects with non alphanumeric names that
 need to be loaded as such to avoid issues). One particularity of cyclone
 is that loading its binary will also force Pd to add its path to the
 search paths, so you don't need to bother adding it to the path as well
@@ -391,11 +391,11 @@ This may cause issues discussed on the next section.
 ### Slash declarations:
 
 What is this and how does it work? Let's say you've downloaded the ELSE
-library into ~/Documents/Pd/externals. Instead of using [declare -path
+library into `~/Documents/Pd/externals`. Instead of using [declare -path
 else] or adding the ELSE folder to the user added paths manually, you
 can just prepend "else/" before an object name. This will make Pd look
 for this object in a folder called 'else' in one of its search paths
-(which includes ~/Documents/Pd/externals) and find it! Here's an
+(which includes `~/Documents/Pd/externals`) and find it! Here's an
 example:
 
 ![](x/img/fig4.7.png)

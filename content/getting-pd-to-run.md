@@ -445,7 +445,7 @@ just a line of text, which should be of the form:
         pd [options] [patches to open]
 
 although you may have to specify a path (such as "~/pd/bin/pd" or
-"C:program filespdbinpd") so your command interpreter can find
+"C:\program files\pd\bin\pd") so your command interpreter can find
 Pd. Possible options include:
 
 

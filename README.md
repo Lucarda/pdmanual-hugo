@@ -28,5 +28,5 @@ Total in 111 ms
 ```
 now a `public` folder has been created in the local repo. You can browse `index.html`
 
-Alternative tou can run command `hugo server` and browse files via `http://localhost:1313/` in your web-browser. If you edit the `.md` files on the `content` folder changes show-up live.
+Alternative you can run command `hugo server` and browse files via `http://localhost:1313/` in your web-browser. If you edit the `.md` files on the `content` folder changes show-up live.
 

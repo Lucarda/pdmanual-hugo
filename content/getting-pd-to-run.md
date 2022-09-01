@@ -121,7 +121,7 @@ more than one, hit "use multiple devices" and you'll be allowed up to
 4 in and 4 out. Each audio device is 2 channels by default, but you may
 specify more if your hardware supports it. Other parameters may be
 tweaked using the command line; see under [preferences and startup
-options]({{< mdlink "getting Pd to run" "preferences and startup options">}}) .
+options]({{< mdlink "getting Pd to run" "preferences and startup options">}}).
 
 ###### MIDI
 
@@ -137,12 +137,12 @@ supported but does not work uniformly across all operating systems..
 
 Pd should work under any version of Windows since XP. You can download
 as a self-extracting archive (a ".exe" file). Run this and select a
-destination directory when prompted, such as "pd" or "Program
-Filespd".
+destination directory when prompted, such as "C:\pd" or "C:\Program
+Files\pd".
 
-If for example you put Pd in "C:Program Filespd", the executable
-program will be "C:Program Filespdbinpd". You can simply adjust
-your path to include C:pdbin and then invoke "pd" in a command
+If for example you put Pd in "C:\Program Files\pd", the executable
+program will be "C:\Program Files\pd\bin\pd". You can simply adjust
+your path to include "C:\Program Files\pd\bin\" and then invoke "pd" in a command
 prompt window. You can also make a shortcut to the executable program
 (left-click on it and drag to the desktop, for example.)
 
@@ -635,7 +635,7 @@ Filenames in Pd are always separated by (Unix-style) forward slashes,
 even if you're on Windows (which uses backslashes). This is so that
 patches can be ported more easily between operating systems. On the
 other hand, if you specify a filename on the command line (as in "pd
--path c:pdlib") the file separator should agree with the operating
+-path c:\pdlib") the file separator should agree with the operating
 system.
 
 A filename specified in a patch with any "/" characters in it (such as
